@@ -5,4 +5,5 @@ The Project description:
 3: compile and create an executable file
 4: A C program! using: puts
 5: Yet another output function: printf
-6: displaying formatted outputs 
+6: displaying formatted outputs
+100: generate an assembly code 
