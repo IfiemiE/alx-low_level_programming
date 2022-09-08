@@ -6,6 +6,7 @@
  * Return: Always 0 (Success)
  */
 int main(void)
-{	
-    return (0);
+{
+printf("Assembly code generated");
+return (0);
 }
