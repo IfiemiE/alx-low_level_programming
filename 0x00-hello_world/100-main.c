@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-printf("Assembly code generated\n");
+puts("Assembly code generated");
 return (0);
 }
