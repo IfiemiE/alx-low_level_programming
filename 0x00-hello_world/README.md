@@ -4,4 +4,5 @@ The Project description:
 2: generate the assembly language
 3: compile and create an executable file
 4: A C program! using: puts
-5: Yet another output function: printf 
+5: Yet another output function: printf
+6: displaying formatted outputs 
