@@ -1,9 +1,5 @@
 	.file	"100-main.c"
 	.text
-	.section	.rodata
-.LC0:
-	.string	"Assembly code generated"
-	.text
 	.globl	main
 	.type	main, @function
 main:
@@ -15,10 +11,25 @@ main:
 	.cfi_offset 6, -16
 	movq	%rsp, %rbp
 	.cfi_def_cfa_register 6
-	leaq	.LC0(%rip), %rdi
+	subq	$32, %rsp
+	movq	%fs:40, %rax
+	movq	%rax, -8(%rbp)
+	xorl	%eax, %eax
+	movabsq	$8031169815276973896, %rax
+	movabsq	$7813586372644773998, %rdx
+	movq	%rax, -32(%rbp)
+	movq	%rdx, -24(%rbp)
+	movl	$0, -16(%rbp)
+	leaq	-32(%rbp), %rax
+	movq	%rax, %rdi
 	call	puts@PLT
 	movl	$0, %eax
-	popq	%rbp
+	movq	-8(%rbp), %rcx
+	xorq	%fs:40, %rcx
+	je	.L3
+	call	__stack_chk_fail@PLT
+.L3:
+	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc

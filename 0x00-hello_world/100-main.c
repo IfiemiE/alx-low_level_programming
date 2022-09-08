@@ -7,6 +7,7 @@
  */
 int main(void)
 {
-puts("Assembly code generated");
+char str[20] = "Holberton School";
+printf("%s\n", str);
 return (0);
 }
