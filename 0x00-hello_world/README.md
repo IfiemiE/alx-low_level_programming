@@ -1,3 +1,4 @@
 The Project description:
 0: run a c-script via a bash script that utilizes the gcc command
-1: compiling a c-file, but not linking.
+1: compile a c-file, but not linking.
+2: generate the assembly language 
