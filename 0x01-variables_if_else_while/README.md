@@ -4,3 +4,5 @@ Tasks: 0x01-variables_if_else_while
 1: ascertaining the last digit of a random number
 2: display letters of the alphabet
 3: display lower and upper cases of the alphabet
+4: display all lower case letters except 'q' and 'e'
+5: display all single digit numbers of base 10
