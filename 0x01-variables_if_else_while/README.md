@@ -7,3 +7,4 @@ Tasks: 0x01-variables_if_else_while
 4: display all lower case letters except 'q' and 'e'
 5: display all single digit numbers of base 10
 6: display all single digit numbers of base 10 using putchar only, at most twice
+7: display lower case alphabet in reverse order
