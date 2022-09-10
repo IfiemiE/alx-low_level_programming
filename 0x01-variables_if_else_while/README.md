@@ -9,3 +9,4 @@ Tasks: 0x01-variables_if_else_while
 6: display all single digit numbers of base 10 using putchar only, at most twice
 7: display lower case alphabet in reverse order
 8: display all digits in base 16, in lower case
+9: display all single digits separated by commas and space
