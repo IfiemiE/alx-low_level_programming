@@ -10,3 +10,5 @@ Tasks: 0x01-variables_if_else_while
 7: display lower case alphabet in reverse order
 8: display all digits in base 16, in lower case
 9: display all single digits separated by commas and space
+100: display all two digits, omitting numbers of equal digits and without repeating 
+    numbers of same digits irrespective of order
