@@ -13,3 +13,4 @@ Tasks: 0x01-variables_if_else_while
 100: display all two digits, omitting numbers of equal digits and without repeating 
     numbers of same digits irrespective of order
 101: Repeat task 100 for three digits
+102: display pairs of two digit combinations, without repeating any pair of same two-digit combos
