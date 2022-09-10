@@ -12,3 +12,4 @@ Tasks: 0x01-variables_if_else_while
 9: display all single digits separated by commas and space
 100: display all two digits, omitting numbers of equal digits and without repeating 
     numbers of same digits irrespective of order
+101: Repeat task 100 for three digits
