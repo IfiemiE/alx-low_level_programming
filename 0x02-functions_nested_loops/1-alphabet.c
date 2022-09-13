@@ -1,4 +1,4 @@
-#include "main.h"
+#include "main12.h"
 /**
  * main - display alphabet in upper case
  *
