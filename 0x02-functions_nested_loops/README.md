@@ -5,3 +5,4 @@ Functions and Nested Loops
 3: check if character is lower case or not
 4: check if character is alphabet or not
 5: check for the sign of a number
+6: compute the absolute value of a number
