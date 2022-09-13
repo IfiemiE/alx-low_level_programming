@@ -6,3 +6,4 @@ Functions and Nested Loops
 4: check if character is alphabet or not
 5: check for the sign of a number
 6: compute the absolute value of a number
+7: print the last digit of a number
