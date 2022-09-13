@@ -1,21 +1,12 @@
 #include "main.h"
 /**
- * main - display the alphabet
+ * main - display alphabet in upper case
  * Return: 0 for a succesful run
- *
  */
-int _putchar(char);
+void print_alphabet(void);
 
-int  main(void)
+int main(void)
 {
-char alpha;
-
-alpha = 'a';
-while (alpha <= 'z')
-{
-	_putchar(alpha);
-	alpha++;
-}
-_putchar('\n');
-return (0);
+	print_alphabet();
+	return (0);
 }
