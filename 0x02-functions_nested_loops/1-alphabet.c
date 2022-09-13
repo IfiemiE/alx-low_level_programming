@@ -2,7 +2,10 @@
 /**
  * main - display the alphabet
  * Return: 0 for a succesful run
+ *
  */
+int _putchar(char);
+
 int  main(void)
 {
 char alpha;
