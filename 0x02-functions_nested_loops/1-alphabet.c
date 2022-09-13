@@ -1,12 +1,18 @@
-#include "main12.h"
+#include "main.h"
 /**
- * main - display alphabet in upper case
+ * print_alphabet - display the alphabet in lower casie
  *
- * Return: 0 for a succesful run
  */
 
-int main(void)
+void print_alphabet(void)
 {
-	print_alphabet();
-	return (0);
+char alpha;
+
+alpha = 'a';
+while (alpha <= 'z')
+{
+	_putchar(alpha);
+	alpha++;
+}
+_putchar('\n');
 }
