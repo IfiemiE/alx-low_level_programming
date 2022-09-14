@@ -17,7 +17,11 @@ void times_table(void)
 
 			if (n1 == 0)
 			{
-				_putchar(' ');
+				if (j != 0)
+				{
+
+					_putchar(' ');
+				}
 			}
 			else
 			{
