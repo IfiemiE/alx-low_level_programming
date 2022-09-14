@@ -9,3 +9,4 @@ Functions and Nested Loops
 7: print the last digit of a number
 8: print every minute from 00:00 to 23:59
 9: prints the times table upto 9x9
+10: compute the sum of two numbers
