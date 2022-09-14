@@ -16,3 +16,4 @@ Functions and Nested Loops
      up to, but excluding, 1024
 102: displays first 50 Fibonacci numbers
 103: sums up even valued Fibonacci numbers not more than 4000000
+104: computes and displays 98th Fibonacci number
