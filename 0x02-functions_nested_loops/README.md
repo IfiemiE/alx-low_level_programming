@@ -8,3 +8,4 @@ Functions and Nested Loops
 6: compute the absolute value of a number
 7: print the last digit of a number
 8: print every minute from 00:00 to 23:59
+9: prints the times table upto 9x9
