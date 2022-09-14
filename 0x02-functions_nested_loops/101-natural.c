@@ -10,7 +10,7 @@ int main(void)
 	int k;
 	int r3;
 	int r5;
-	int count = 0;
+	int sum = 0;
 
 	for (k = 1; k < 1024; k++)
 	{
@@ -18,17 +18,10 @@ int main(void)
 		r5 = k % 5;
 		if ((r3 == 0) || (r5 == 0))
 		{
-			count = count + 1;
-			if (count == 1)
-			{
-				printf("%d", k);
-			}
-			else
-			{
-				printf(" %d", k);
-			}
+			sum = sum + k;
 		}
 	}
+	printf("%d", sum);
 	printf("\n");
 
 	return (0);
