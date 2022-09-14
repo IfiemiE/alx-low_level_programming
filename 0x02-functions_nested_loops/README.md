@@ -10,3 +10,4 @@ Functions and Nested Loops
 8: print every minute from 00:00 to 23:59
 9: prints the times table upto 9x9
 10: compute the sum of two numbers
+11: print all counting numbers from a given number to 98
