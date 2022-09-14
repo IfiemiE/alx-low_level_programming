@@ -6,4 +6,20 @@
  */
 int main(void)
 {
-	long int F
+	unsigned long int f1 = 1;
+	unsigned long int f2 = 2;
+	unsigned long int sum = 0;
+	unsigned long int F;
+
+	do {
+		F = f1 + f2;
+		if ((F % 2) == 0)
+		{
+			sum = sum + F;
+		}
+		f1 = f2;
+		f2 = F;
+	} while (F <= 4000000);
+	printf("%lu\n", sum);
+	return (0);
+}

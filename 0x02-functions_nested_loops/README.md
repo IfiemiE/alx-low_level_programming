@@ -14,3 +14,5 @@ Functions and Nested Loops
 100: print times table up to nxn
 101: displays sum of all natural numbers that are multiples of 3 or 5
      up to, but excluding, 1024
+102: displays first 50 Fibonacci numbers
+103: sums up even valued Fibonacci numbers not more than 4000000
