@@ -12,5 +12,5 @@ Functions and Nested Loops
 10: compute the sum of two numbers
 11: print all counting numbers from a given number to 98
 100: print times table up to nxn
-101: displays all natural numbers that are multiples of 3 or 5
+101: displays sum of all natural numbers that are multiples of 3 or 5
      up to, but excluding, 1024
