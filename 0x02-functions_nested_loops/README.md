@@ -7,3 +7,4 @@ Functions and Nested Loops
 5: check for the sign of a number
 6: compute the absolute value of a number
 7: print the last digit of a number
+8: print every minute from 00:00 to 23:59
