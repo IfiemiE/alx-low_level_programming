@@ -21,12 +21,11 @@ void print_remaining_days(int month, int day, int year)
 /*
 *		printf("leap year\n");
 */
-		if (((month == 2) && (day > 29)))
+		if (((month != 2) || (day <= 29)))
 		{
-			printf("Invalid date\n");
-		}
-		else
-		{
+/*
+*			printf("Invalid date\n");
+*/
 			if (month > 2)
 			{
 				days++;
@@ -38,11 +37,7 @@ void print_remaining_days(int month, int day, int year)
 	}
 	else
 	{
-		if ((month == 2) && (day > 28))
-		{
-			printf("Invalid date\n");
-		}
-		else
+		if ((month != 2) || (day <= 28))
 		{
 /*
 *			printf("Not leap\n");
