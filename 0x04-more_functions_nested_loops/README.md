@@ -7,3 +7,5 @@
 6: function to draw a dash line
 7: function to draw \ along the diagonal of an nxn space
 8: function to draw a square of a given size with #
+9: program to replace multiples of 3 with fizz, multiples of 5 with buzz,
+   multiples of both 3 and 5 with fizzbuzz, from 1 - 100
