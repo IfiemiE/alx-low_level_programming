@@ -4,3 +4,4 @@
 3: function to print numbers 0 - 9
 4: function to print numbers 0 - 9, except 2 and 4
 5: function to print the numbers 0 - 14, 10 times
+6: function to draw a dash line
