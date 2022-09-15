@@ -6,3 +6,4 @@
 5: function to print the numbers 0 - 14, 10 times
 6: function to draw a dash line
 7: function to draw \ along the diagonal of an nxn space
+8: function to draw a square of a given size with #
