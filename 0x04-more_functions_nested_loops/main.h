@@ -4,5 +4,6 @@
 #include <unistd.h>
 void _putchar (char);
 int _isupper(char);
+int _isdigit(char);
 
 #endif

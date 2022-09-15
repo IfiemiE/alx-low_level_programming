@@ -1,1 +1,2 @@
-0:  function to check if a given character is upper case
+0: function to check if a given character is upper case or not
+1: function to check if a given character is a digit or not
