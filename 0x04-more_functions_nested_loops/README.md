@@ -11,3 +11,4 @@
    multiples of both 3 and 5 with fizzbuzz, from 1 - 100
 10: function to draw a triangle, given a size
 11: program to find the largest prime factor of 612852475143
+12: function to print out any given number using onlu _putchar
