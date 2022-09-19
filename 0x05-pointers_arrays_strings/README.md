@@ -6,3 +6,4 @@
 5: function reverses a string
 6: function prints every other character in even positions
 7: function prints second half of a string
+8: function prints n elements of a given array
