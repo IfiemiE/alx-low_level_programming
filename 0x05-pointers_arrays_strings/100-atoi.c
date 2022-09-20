@@ -1,44 +1,50 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
 * _atoi - converts a string to an integer
-* @s: the given character stream (string)
-* Return: extracted and converted integer type
+* @s: string to be converted
+* Return: the int converted from the string
 */
 int _atoi(char *s)
 {
-	int sign = 1;
-	int i = 0;
-	int result = 0;
-	int j;
-	int start = 0;
-	int stop;
+	int i, d, n, f, len, digit;
 
-	while (*(s + i))
+	i = 0;
+	d = 0;
+	n = 0;
+	len = 0;
+	f = 0;
+	digit = 0;
+
+	while (s[len] != '\0')
 	{
-		if ((*(s + i) == '-') && (start == 0))
+		len++;
+	}
+	while ((i < len) && (f == 0))
+	{
+		if (s[i] == '-')
 		{
-			sign = sign * (-1);
+			d++;
 		}
-		else if (((*(s + i)) != '+') && (*(s + i)) != ' ')
+		if ((s[i] >= '0') && (s[i] <= '9'))
 		{
-			stop = 1;
-			for (j = 0; j <= 9; j++)
+			digit = s[i] - '0';
+			if ((d % 2) == 1)
 			{
-				if (*(s + i) == (j + '0'))
-				{
-					start = 1;
-					stop = 0;
-					result = result * 10 + j;
-					break;
-				}
+				digit = -digit;
 			}
-		}
-		if ((start == 1) && (stop == 1))
-		{
-			break;
+			n = n * 10 + digit;
+			f = 1;
+			if ((s[i + 1] < '0') || (s[i + 1] > '9'))
+			{
+				break;
+			}
+			f = 0;
 		}
 		i++;
 	}
-	return (sign * result);
+	if (f == 0)
+		return (0);
+
+	return (n);
 }

@@ -9,3 +9,4 @@
 8: function prints n elements of a given array
 9: function copies one array into another
 100: function converts number in a stream of characters to integer
+101: program to generate random password
