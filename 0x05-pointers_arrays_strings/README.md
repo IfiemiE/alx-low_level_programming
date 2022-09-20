@@ -7,3 +7,5 @@
 6: function prints every other character in even positions
 7: function prints second half of a string
 8: function prints n elements of a given array
+9: function copies one array into another
+100: function converts number in a stream of characters to integer
