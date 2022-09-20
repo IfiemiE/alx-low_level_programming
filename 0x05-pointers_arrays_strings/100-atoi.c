@@ -33,10 +33,6 @@ int _atoi(char *s)
 					break;
 				}
 			}
-			if (start == 0)
-			{
-				sign = 1;
-			}
 		}
 		if ((start == 1) && (stop == 1))
 		{
