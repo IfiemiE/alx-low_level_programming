@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#inclde "main.h"
+#include "main.h"
 
 /**
 * main - genrate password
@@ -9,53 +9,25 @@
 */
 int main(void)
 {
-	char *s;
-	int k, len;
-	char alpha;
-	int i, j;
+	int p[100];
+	int i, sum, n;
 
-	len = 10;
-	for (n = 0; n < len; n++)
+	sum = 0;
+	srand(time(NULL));
+
+	for (i = 0; i < 100; i++)
 	{
-		srand(time(NULL));
-		k = rand() % 36;
-		if (k == 0)
+		p[i] = rand() % 78;
+		sum = sum + (p[i] + '0');
+		_putchar(p[i] + '0');
+		if (((2772 - sum) - '0') < 78)
 		{
-			k = 36;
-		}
-		alpha = 'a';
-		j = 1;
-		while (j != k)
-		{
-			if (k <= 26)
-			{
-				alpha = 'a';
-				for (i = 1; i <= 26; i++)
-				{
-					if (i == k)
-					{
-						*(s + n) = alpha;
-						break;
-					}
-					alpha++;
-				}
-			}
-			else
-			{
-				k = k % 26;
-				alpha = '1';
-				for (i = 1; i <=9; i++)
-				{
-					if (i == k)
-					{
-						*(s + n) = alpha;
-						break;
-					}
-					alpha++;
-				}
-			}
+			n = 2772 - sum - '0';
+			sum = sum + n;
+			_putchar(n + '0');
+			break;
 		}
 	}
-	printf("password: %s\n", s)
+	_putchar('\n');
 	return (0);
 }
