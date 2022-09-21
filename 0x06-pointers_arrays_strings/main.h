@@ -4,7 +4,7 @@
 void _putchar(char);
 char *_strcat(char*, char*);
 char *_strncat(char*, char*, int n);
-
+char *_strncpy(char*, char*, int n);
 
 
 
