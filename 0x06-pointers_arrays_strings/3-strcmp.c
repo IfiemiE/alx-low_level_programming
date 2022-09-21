@@ -8,14 +8,16 @@
 */
 int _strcmp(char *s1, char *s2)
 {
-	int d1, d2, diff;
+	int d1 = 0;
+	int d2 = 0;
+	int diff;
 	int n = 0, cont = 1;
 	int i = 0;
 
 	for (i = 0; (*(s1 + i) == *(s2 + i)) && (cont == 1); i++)
 	{
 		n++;
-		if (*(s1 + i))
+		if (*(s1 + i) || *(s2 + i))
 		{
 			cont = 0;
 			n--;
