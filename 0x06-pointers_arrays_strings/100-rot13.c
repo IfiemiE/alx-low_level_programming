@@ -7,7 +7,8 @@
 char *rot13(char *s)
 {
 	int i;
-	int num, skip;
+	int num;
+	int skip = 0;
 
 	for (i = 0; *(s + i) != '\0'; i++)
 	{
