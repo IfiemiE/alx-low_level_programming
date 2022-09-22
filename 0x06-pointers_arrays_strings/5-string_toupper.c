@@ -10,16 +10,15 @@ char *string_toupper(char *s)
 	char Ucase;
 	char Lcase;
 
-	for (i = 0; *(s + i) == '\0'; i++)
+	for (i = 0; *(s + i) != '\0'; i++)
 	{
 		if ((*(s + i) >= 'a') && (*(s + i) <= 'z'))
 		{
 			Ucase = 'A';
-			for (Lcase = 'a'; Lcase < (*(s + i)); Lcase++)
+			for (Lcase = 'a'; Lcase < (*(s + i)); ++Lcase)
 			{
-				Ucase++;
+				++Ucase;
 			}
-
 			*(s + i) = Ucase;
 		}
 	}
