@@ -8,25 +8,29 @@
 */
 int _strcmp(char *s1, char *s2)
 {
-	int d1 = 0;
-	int d2 = 0;
-	int diff;
-	int n = 0, cont = 1;
+	char *str1, *str2;
 	int i = 0;
+	int cont = 1;
 
-	for (i = 0; (*(s1 + i) == *(s2 + i)) && (cont == 1); i++)
+	str1 = s1;
+	str2 = s2;
+	while (cont == 1)
 	{
-		n++;
-		if (*(s1 + i) || *(s2 + i))
+		if (*(str1 + i) != '\0' && *(str2 + i) != '\0')
+		{
+			if (*(str1 + i) == *(str2 + i))
+			{
+				i++;
+			}
+			else
+			{
+				cont = 0;
+			}
+		}
+		else
 		{
 			cont = 0;
-			n--;
 		}
 	}
-
-	d1 = *(s1 + n);
-	d2 = *(s2 + n);
-	diff = d1 - d2;
-
-	return (diff);
+	return (*(str1 + i) - *(str2 + i));
 }
