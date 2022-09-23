@@ -1,5 +1,8 @@
 #include <stdio.h>
-
+/**
+* main - to modify an output
+* Return: 0 always
+*/
 int main(void)
 {
 	int n;
