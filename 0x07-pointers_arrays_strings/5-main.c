@@ -6,8 +6,8 @@
 */
 int main(void)
 {
-char *s = " ";
-char *f = " ";
+char *s = " dreddewdrewdd";
+char *f = "drew";
 char *t;
 
 t = _strstr(s, f);
