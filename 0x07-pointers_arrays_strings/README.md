@@ -10,4 +10,5 @@
 3: A function that returns the length of a initial subsection
 	of a string that consist of only characters from another
 	string, like the fucntion, strspn
-4: 
+4: A function that returns the pointer to the first occurrence
+	of a byte from a given string set of characters
