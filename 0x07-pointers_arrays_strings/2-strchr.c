@@ -20,5 +20,8 @@ char *_strchr(char *s, char c)
 			break;
 		}
 	}
+	if (*(s + i) == c)
+		locstr = s + i;
+
 	return (locstr);
 }
