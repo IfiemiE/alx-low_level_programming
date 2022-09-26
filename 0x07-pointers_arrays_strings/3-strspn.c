@@ -14,7 +14,7 @@ unsigned int _strspn(char *s, char *accept)
 
 	for (i = 0; *(s + i); i++)
 	{
-		issame = 0;
+		is_same = 0;
 		for (j = 0; *(accept + j); j++)
 		{
 			if (*(s + i) == *(accept + j))
@@ -24,9 +24,8 @@ unsigned int _strspn(char *s, char *accept)
 				break;
 			}
 		}
-		if ((n >= 1) && (is_same = 0))
+		if ((n >= 1) && (is_same == 0))
 			break;
 	}
 	return (n);
-
-
+}
