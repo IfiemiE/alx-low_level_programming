@@ -9,41 +9,43 @@
   */
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j;
+	int i = 0, j = 0;
 	char *start = NULL;
-	int len_needle = 0;
+	int len_needle = 0, len_hay = 0;
 	int stp = 0;
 	int is_possible = 0;
 
 	for (i = 0; *(needle + i); i++)
 		len_needle++;
 
-	i = 0;
-	j = 0;
-	while ((stp == 0) && (*(haystack + i) != '\0'))
-	{
-		if (*(haystack + i) == *(needle + j))
-		{
-			if (j == 0)
-			{
-				is_possible = 1;
-				start = haystack + i;
-			}
-			j += 1;
-		}
-		else
-		{
-			is_possible = 0;
-			start = NULL;
-			j = 0;
-		}
-		if ((j == len_needle) && (is_possible == 1))
-			stp = 1;
-		else
-			i++;
-	}
-	if (j < len_needle)
-		start = NULL;
+	for (i = 0; *(haystack + i); i++)
+		len_hay++;
 
+	if ((len_needle != 0) && (len_hay != 0))
+	{
+		while ((stp == 0) && (*(haystack + i) != '\0'))
+		{
+			if (*(haystack + i) == *(needle + j))
+			{
+				if (j == 0)
+				{
+					is_possible = 1;
+					start = haystack + i;
+				}
+				j += 1;
+				if ((j == len_needle) && (is_possible == 1))
+					break;
+			}
+			else
+			{
+				is_possible = 0;
+				start = NULL;
+				j = 0;
+			}
+			i++;
+		}
+		if (j < len_needle)
+			start = NULL;
+	}
 	return (start);
 }
