@@ -6,8 +6,8 @@
 */
 int main(void)
 {
-char *s = "hello, world";
-char *f = "\0";
+char *s = " ";
+char *f = " ";
 char *t;
 
 t = _strstr(s, f);
