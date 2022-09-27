@@ -16,3 +16,4 @@
 	in a string, like the function, strstr
 6: A function that prints entries of a chessboard (2D) array
 7: A function that prints the sums of diagonals of a square matrix
+100: A function thats copy a strings from a pointer to its address

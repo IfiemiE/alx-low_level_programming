@@ -1,19 +1,13 @@
 #include "main.h"
 /**
-  * print_chessboard - prints characters in a chessboard
-  * style/pattern of arrangement
-  * @a: a 2D array of characters
+  * set_string - sets strings from a double pointer
+  * @s: the given string
+  * @to: string copied
   */
-void print_chessboard(char (*a)[8])
+void set_string(char **s, char *to)
 {
-	int i, j;
+	char *ptr;
 
-	for (i = 0; i < 8; i++)
-	{
-		for (j = 0; j < 8; j++)
-		{
-			_putchar(*(a[i] + j));
-		}
-		_putchar('\n');
-	}
+	ptr = to;
+	*s = ptr;
 }
