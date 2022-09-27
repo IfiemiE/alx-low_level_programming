@@ -14,3 +14,5 @@
 	of a byte from a given string set of characters
 5: A function that finds the first occurrence of a substring
 	in a string, like the function, strstr
+6: A function that prints entries of a chessboard (2D) array
+7: A function that prints the sums of diagonals of a square matrix
