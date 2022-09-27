@@ -37,10 +37,10 @@ char *_strstr(char *haystack, char *needle)
 						break;
 					}
 				}
-				if (k == len_needle)
-					break;
+				if (*(needle + k) == '\0')
+					return (start);
 			}
 		}
 	}
-	return (start);
+	return (0);
 }
