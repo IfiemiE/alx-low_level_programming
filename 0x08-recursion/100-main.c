@@ -6,9 +6,9 @@
 */
 int main(void)
 {
-	int n;
+int r;
 
-	n = _strlen_recursion("");
-	printf("%d\n", n);
-	return (0);
+r = is_palindrome("");
+printf("%d\n", r);
+return (0);
 }
