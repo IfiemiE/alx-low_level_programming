@@ -58,6 +58,10 @@ int adjust(char *s, int p, char c)
 		{
 			r = adjust(s, (p + 1), c);
 		}
+		else if (*(s + p) == *(s + p + 1))
+		{
+			r = adjust(s, (p + 1), c);
+		}
 		else
 		{
 			r = p;
@@ -87,13 +91,9 @@ int compare(char *s1, char *s2, int p1, int p2)
 		if (*(s2 + p2) != '*')
 		{
 			if (*(s1 + p1) != *(s2 + p2))
-			{
 				result = 0;
-			}
 			else
-			{
 				result = compare(s1, s2, (p1 + 1), (p2 + 1));
-			}
 
 		}
 		else
@@ -111,9 +111,12 @@ int compare(char *s1, char *s2, int p1, int p2)
 				result = 1;
 		}
 	}
+	else if ((*(s1 + p1) != '\0') && (*(s2 + p2) == '\0'))
+		result = 0;
+	else if ((*(s1 + p1) == '\0') && (*(s2 + p2) != '\0'))
+		result = 0;
 	else
 		result = 1;
-
 
 	return (result);
 }
