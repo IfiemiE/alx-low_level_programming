@@ -6,9 +6,6 @@
 */
 int main(void)
 {
-int r;
 
-r = wildcmp("***", "**");
-printf("%d\n", r);
 return (0);
 }
