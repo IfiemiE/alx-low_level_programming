@@ -36,7 +36,7 @@ int main(int argc, char **argv)
 			if (cash == 0)
 				break;
 		}
+		printf("%d\n", sum);
 	}
-	printf("%d\n", sum);
 	return (0);
 }
