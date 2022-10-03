@@ -31,5 +31,6 @@ int main(void)
 			printf("%d ", grid[i][j]);
 		printf("\n");
 	}
+	free(grid);
 	return (0);
 }
