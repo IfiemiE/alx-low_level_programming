@@ -10,3 +10,6 @@
 3: A function to create a pointer to a 2D array, initialize all
    all elements to zero and return the array pointer
 4: A function to free a 2D array created by malloc
+
+100: A function to concatenate all passed-in arguments
+101: A function to split a string into two
