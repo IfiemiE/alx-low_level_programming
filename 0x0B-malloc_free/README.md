@@ -12,4 +12,4 @@
 4: A function to free a 2D array created by malloc
 
 100: A function to concatenate all passed-in arguments
-101: A function to split a string into two
+101: A function to split a string into words using space as delimiter
