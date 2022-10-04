@@ -11,7 +11,7 @@ int strLen(char *s)
 	int i, len = 0;
 
 	for (i = 0; *(s + i) != '\0'; i++)
-			len++;
+		len++;
 	return (len);
 }
 
@@ -73,7 +73,7 @@ char **strtow(char *str)
 		return (NULL);
 	wc = countw(str);
 	arr = malloc((wc + 1) * sizeof(*arr));
-	if (arr == NULL)
+	if ((arr == NULL) || (wc == 0))
 		return (NULL);
 	arr[wc] = NULL;
 	i = 0;
