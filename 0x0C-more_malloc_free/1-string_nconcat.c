@@ -1,13 +1,13 @@
 #include "main.h"
 #include <stdlib.h>
-/*
- * string_nconcat - append n bytes of a second string
- * to a first one
- * @s1:first string
- * @s2: second string
- * @n: number of bytes to append to s1, from s2
- * Return: pointer to the concatenated strings
- */
+/**
+  * string_nconcat - append n bytes of a second string
+  * to a first one
+  * @s1:first string
+  * @s2: second string
+  * @n: number of bytes to append to s1, from s2
+  * Return: pointer to the concatenated strings
+  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	int len, len1 = 0, len2 = 0;
