@@ -3,5 +3,6 @@
 # Tasks:
 0: A function to create memory space, pass it if successful, terminate
    if it fails (using normal termination process, with status 98)
-1:
+1: A function to append n characters of a string to another given string
+   and return a pointer to the resulting concatenated string
 
