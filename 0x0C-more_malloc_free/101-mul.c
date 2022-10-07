@@ -1,31 +1,43 @@
 #include "main.h"
 #include <stdlib.h>
 /**
-  * digit_check - checks if all characters in a string
+  * input_check - checks if all characters in a string
   * are digits
   * @str: passed in string argument
+  * @narg: number of command line arguments
   * Return: 1 if all characters are digits and 0, if not.
   */
-int digit_check(char *str)
+int input_check(char **str, int narg)
 {
-	int i, r;
-	char n, ltr;
+	int i, j, k, r;
+	char n, ltr, err[] = "ERROR\n";
 
-	for (i = 0; *(str + i) != '\0'; i++)
+	if (narg != 3)
 	{
-		r = 0;
-		n = *(str + i);
-		for (ltr = '0'; ltr <= '9'; ltr++)
+		for (j = 0; j < 6; j++)
+			_putchar(err[j]);
+		return (0);
+	}
+	for (k = 1; k < 3; k++)
+	{
+		for (i = 0; *(str[k] + i) != '\0'; i++)
 		{
-			if (ltr == n)
+			r = 0;
+			n = *(str[k] + i);
+			for (ltr = '0'; ltr <= '9'; ltr++)
 			{
-				r = 1;
-				break;
+				if (ltr == n)
+				{
+					r = 1;
+					break;
+				}
 			}
-		}
-		if (r == 0)
-		{
-			return (0);
+			if (r == 0)
+			{
+				for (j = 0; j < 6; j++)
+					_putchar(err[j]);
+				return (0);
+			}
 		}
 	}
 	return (1);
@@ -36,9 +48,10 @@ int digit_check(char *str)
   * @size: the desired length of the created array
   * Return: pointer to the created array
   */
-int *place_value(int size)
+int *place_value(unsigned int size)
 {
-	int *arr, i;
+	int *arr;
+	unsigned int i;
 
 	arr = malloc(size * sizeof(*arr));
 	if (arr == NULL)
@@ -86,41 +99,25 @@ int *str2num(char *str)
   * @L2: length of second array
   * Return: pointer to the product array
   */
-int *multiply(int *N1, int *N2, int L1, int L2)
+int *multiply(int *N1, int *N2, unsigned int L1, unsigned int L2)
 {
-	int i, j, k, p1, p2, p, L;
+	int i, j;
 	int *prod;
 
-	L = L1 + L2;
-	prod = place_value(L);
+	prod = place_value(L1 + L2);
 	for (i = (L1 - 1); i >= 0; i--)
 	{
 		for (j = (L2 - 1); j >= 0; j--)
 		{
-			p1 = (L1 - 1) - i;
-			p2 = (L2 - 1) - j;
-			p = p1 + p2;
-			k = (L - 1) - p;
-			prod[k] = prod[k] + N1[i] * N2[j];
-			if (prod[k] > 9)
+			prod[i + j + 1] = prod[i + j + 1] + N1[i] * N2[j];
+			if (prod[i + j + 1] > 9)
 			{
-				prod[k - 1] = prod[k - 1] + (prod[k] / 10);
-				prod[k] = prod[k] % 10;
+				prod[i + j] = prod[i + j] + (prod[i + j + 1] / 10);
+				prod[i + j + 1] = prod[i + j + 1] % 10;
 			}
 		}
 	}
 	return (prod);
-}
-/**
-  * _puts - prints a string
-  * @str: given string
-  */
-void _puts(char *str)
-{
-	int i;
-
-	for (i = 0; *(str + i) != '\0'; i++)
-		_putchar(*(str + i));
 }
 /**
   * main - computes and print the product of numbers passed in
@@ -131,42 +128,34 @@ void _puts(char *str)
   */
 int main(int argc, char **argv)
 {
-	int isnum1, isnum2, Len1 = 0, Len2 = 0, L;
+	int i, nz, Len1 = 0, Len2 = 0;
 	int *N1, *N2, *N;
-	int i;
 
-	if (argc != 3)
-	{
-		_puts("ERROR\n");
+	if (input_check(argv, argc) == 0)
 		exit(98);
-	}
-	isnum1 = digit_check(argv[1]);
-	isnum2 = digit_check(argv[2]);
-	if ((isnum1 == 0) || (isnum2 == 0))
-	{
-		_puts("ERROR\n");
-		exit(98);
-	}
+
 	for (i = 0; *(argv[1] + i) != '\0'; i++)
 		Len1++;
 	for (i = 0; *(argv[2] + i) != '\0'; i++)
 		Len2++;
-	L = Len1 + Len2;
 	N1 = str2num(argv[1]);
 	N2 = str2num(argv[2]);
 	N = multiply(N1, N2, Len1, Len2);
-	for (i = 0; i < L; i++)
+	nz = 0;
+	for (i = 0; i < (Len1 + Len2); i++)
 	{
-		if (i == 0)
+		if (N[i] != 0)
 		{
-			if (N[i] != 0)
-				_putchar(N[i] + '0');
+			nz = 1;
+			_putchar(N[i] + '0');
 		}
 		else
-			_putchar(N[i] + '0');
+		{
+			if ((nz == 1) || (i == (Len1 + Len2 - 1)))
+				_putchar(N[i] + '0');
+		}
 	}
 	_putchar('\n');
-
 	free(N1);
 	free(N2);
 	free(N);
