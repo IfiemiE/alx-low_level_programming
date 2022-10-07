@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
 /**
   * digit_check - checks if all characters in a string
   * are digits
@@ -112,7 +111,17 @@ int *multiply(int *N1, int *N2, int L1, int L2)
 	}
 	return (prod);
 }
+/**
+  * _puts - prints a string
+  * @str: given string
+  */
+void _puts(char *str)
+{
+	int i;
 
+	for (i = 0; *(str + i) != '\0'; i++)
+		_putchar(*(str + i));
+}
 /**
   * main - computes and print the product of numbers passed in
   * at command line
@@ -128,14 +137,14 @@ int main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		printf("ERROR\n");
+		_puts("ERROR\n");
 		exit(98);
 	}
 	isnum1 = digit_check(argv[1]);
 	isnum2 = digit_check(argv[2]);
 	if ((isnum1 == 0) || (isnum2 == 0))
 	{
-		printf("ERROR\n");
+		_puts("ERROR\n");
 		exit(98);
 	}
 	for (i = 0; *(argv[1] + i) != '\0'; i++)
@@ -151,12 +160,12 @@ int main(int argc, char **argv)
 		if (i == 0)
 		{
 			if (N[i] != 0)
-				printf("%d", N[i]);
+				_putchar(N[i] + '0');
 		}
 		else
-			printf("%d", N[i]);
+			_putchar(N[i] + '0');
 	}
-	printf("\n");
+	_putchar('\n');
 
 	free(N1);
 	free(N2);
