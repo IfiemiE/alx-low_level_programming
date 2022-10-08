@@ -48,9 +48,9 @@ int input_check(char **str, int narg)
   * @size: the desired length of the created array
   * Return: pointer to the created array
   */
-int *place_value(unsigned int size)
+unsigned long int *place_value(unsigned int size)
 {
-	int *arr;
+	unsigned long int *arr;
 	unsigned int i;
 
 	arr = malloc(size * sizeof(*arr));
@@ -66,9 +66,9 @@ int *place_value(unsigned int size)
   * @str: the passed-in string of digits
   * Return: pointer to the integer array
   */
-int *str2num(char *str)
+unsigned long int *str2num(char *str)
 {
-	int *num;
+	unsigned long int *num;
 	int i, n, strL = 0;
 	char ltr, c;
 
@@ -99,10 +99,11 @@ int *str2num(char *str)
   * @L2: length of second array
   * Return: pointer to the product array
   */
-int *multiply(int *N1, int *N2, unsigned int L1, unsigned int L2)
+unsigned long int *multiply(unsigned long int *N1, unsigned long int *N2,
+		unsigned int L1, unsigned int L2)
 {
 	int i, j;
-	int *prod;
+	unsigned long int *prod;
 
 	prod = place_value(L1 + L2);
 	for (i = (L1 - 1); i >= 0; i--)
@@ -129,7 +130,7 @@ int *multiply(int *N1, int *N2, unsigned int L1, unsigned int L2)
 int main(int argc, char **argv)
 {
 	int i, nz, Len1 = 0, Len2 = 0;
-	int *N1, *N2, *N;
+	unsigned long int *N1, *N2, *N;
 
 	if (input_check(argv, argc) == 0)
 		exit(98);
