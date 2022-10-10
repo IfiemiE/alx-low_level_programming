@@ -1,5 +1,8 @@
+#ifndef MAIN_H
+#define MAIN_H
+
 /**
-  * dog - for describing a dog by some
+  * struct dog - for describing a dog by some
   * elements
   * @name: first element
   * @age: second element
@@ -11,3 +14,5 @@ struct dog
 	float age;
 	char *owner;
 };
+
+#endif
