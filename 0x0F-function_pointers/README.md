@@ -1,0 +1,7 @@
+##        0x0F - Function Pointers Project
+
+#         Tasks
+
+0: A function to accept a string and a function pointer
+   and then prints string using the pointer
+1: 
