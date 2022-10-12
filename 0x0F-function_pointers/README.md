@@ -8,3 +8,5 @@
    on each member of an array
 2: A function to seach and return the first index occurrence of a
    non-zero integer
+3: A program to emulate calculator at command line
+   for +, *, -, /, % operations
