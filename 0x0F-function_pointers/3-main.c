@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 4)
 	{
-		printf("ERROR\n");
+		printf("Error\n");
 		exit(98);
 	}
 	a = atoi(argv[1]);
@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	operator = get_op_func(argv[2]);
 	if (operator == NULL)
 	{
-		printf("ERROR\n");
+		printf("Error\n");
 		exit(99);
 	}
 	printf("%d\n", operator(a, b));
