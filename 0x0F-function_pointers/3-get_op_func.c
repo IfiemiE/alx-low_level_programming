@@ -1,4 +1,5 @@
 #include "3-calc.h"
+#include <string.h>
 
 /**
   * get_op_func - selects function associated
@@ -25,5 +26,5 @@ int (*get_op_func(char *s))(int, int)
 			return (ops[i].f);
 		i++;
 	}
-	return (NULL);
+	return (ops[i].f);
 }
