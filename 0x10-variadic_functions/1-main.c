@@ -6,7 +6,7 @@
   */
 int main(void)
 {
-	print_numbers("*", 4, 100, 12, 5, 4);
+	print_numbers(NULL, 4, 100, 12, 5, 4);
 
 	return (0);
 }
