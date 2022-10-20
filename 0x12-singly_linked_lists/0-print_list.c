@@ -7,13 +7,13 @@
   */
 size_t print_list(const list_t *h)
 {
-	list_t *ptr;
+	const list_t *ptr;
 	int count = 0;
 
 	ptr = h;
 	while (ptr != NULL)
 	{
-		if (p->str == NULL)
+		if (ptr->str == NULL)
 			printf("[0] (nil)\n");
 		else
 			printf("[%d] %s", ptr->len, ptr->str);
