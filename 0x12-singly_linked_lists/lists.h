@@ -24,6 +24,6 @@ void _putchar(char);
 size_t print_list(const list_t *h);
 size_t list_len(const list_t *h);
 
-
+void print(void)__attribute__((constructor));
 
 #endif
