@@ -32,9 +32,14 @@ int main(void)
 	third->n = 8;
 	last->n = 4;
 	last->next = NULL;
+	free(first);
+	free(second);
+	free(third);
+	free(last);
+	h = NULL;
 	n = print_listint(h);
 	printf("number of nodes--->%ld\n", n);
-	n = delete_nodeint_at_index(&h, 1);
+	n = delete_nodeint_at_index(&h, 4);
 	n = print_listint(h);
 	printf("number of nodes--->%ld\n", n);
 	free_listint(h);
