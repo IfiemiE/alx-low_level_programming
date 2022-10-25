@@ -8,3 +8,4 @@
 4: frees a linked list given the head (a pointer to the first node)
 5: frees a linked list given a pointer to the head
 6: deletes (frees) the first node, and establish the second node as first
+7: returns the pointer to node at a given position n
