@@ -58,8 +58,18 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	Len = linkedlist_len(head);
 	new_node = malloc(sizeof(listint_t));
-	if ((Len == 0) || (idx > Len) || (new_node == NULL))
+	if ((idx > Len) || (new_node == NULL))
 		return (NULL);
+	if (Len == 0)
+	{
+		if ((*head == NULL) && (idx == 0))
+		{
+			*head = new_node;
+			new_node->next = NULL;
+			return (new_node);
+		}
+		return (NULL);
+	}
 	if (idx == 0)
 	{
 		new_node->next = *head;
