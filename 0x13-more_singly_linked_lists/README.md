@@ -11,3 +11,4 @@
 7: returns the pointer to node at a given position n
 8: sums the (numeric) data in nodes of a linked list
 9: inserts a node at a given index on a linked list
+10: deletes a node at a given index on a linked list
