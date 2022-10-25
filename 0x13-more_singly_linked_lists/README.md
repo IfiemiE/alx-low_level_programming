@@ -5,4 +5,6 @@
 1: computes the length of a linked list
 2: adds a new node at the beginning of a linked list
 3: adds a new node at the end of a linked list
-4: frees a linked list
+4: frees a linked list given the head (a pointer to the first node)
+5: frees a linked list given a pointer to the head
+6: deletes (frees) the first node, and establish the second node as first
