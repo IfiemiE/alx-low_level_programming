@@ -15,3 +15,4 @@
 100: reverses a linked list
 101: prints a list with a one-time loop
 102: frees a list with a one-time loop
+103: finds a loop in a link
