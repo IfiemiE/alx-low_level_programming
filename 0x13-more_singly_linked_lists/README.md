@@ -14,3 +14,4 @@
 10: deletes a node at a given index on a linked list
 100: reverses a linked list
 101: prints a list with a one-time loop
+102: frees a list with a one-time loop

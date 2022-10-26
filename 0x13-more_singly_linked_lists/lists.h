@@ -30,8 +30,8 @@ int sum_listint(listint_t *);
 listint_t *insert_nodeint_at_index(listint_t **, unsigned int, int);
 int delete_nodeint_at_index(listint_t **, unsigned int);
 listint_t *reverse_listint(listint_t **);
-size_t print_listint_safe(const listint_t *head);
-
+size_t print_listint_safe(const listint_t *);
+size_t free_listint_safe(listint_t **);
 
 
 #endif
