@@ -9,12 +9,12 @@
 size_t free_listint_safe(listint_t **h)
 {
 	listint_t *ptr, *node;
-
+	size_t count = 0;
 
 	if (*h != NULL)
 	{
 		node = *h;
-		ptr = *h->next;
+		ptr = (*h)->next;
 		while (ptr != NULL)
 		{
 			free(node);

@@ -37,6 +37,6 @@ int main(void)
 	h = reverse_listint(&h);
 	n = print_listint_safe(h);
 	printf("number of nodes--->%ld\n", n);
-	free_listint(h);
+	n = free_listint_safe(&h);
 	return (0);
 }
