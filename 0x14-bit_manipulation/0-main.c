@@ -6,7 +6,7 @@
   */
 int main(void)
 {
-	char *b = "10001001";
+	char *b = "100121";
 	unsigned int n;
 
 	n = binary_to_uint(b);
