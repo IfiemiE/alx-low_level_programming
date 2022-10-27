@@ -6,8 +6,11 @@
   */
 int main(void)
 {
-	print_binary(137);
+	int n, r;
 
+	n = 17;
+	r = get_bit(n, 4);
+	printf("bit = %d\n", r);
 
 	return (0);
 }
